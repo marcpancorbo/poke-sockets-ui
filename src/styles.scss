@@ -16,5 +16,10 @@ html {
 body {
   margin: 0 auto;
   height: 100dvh;
+  background-color: #628cae;
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

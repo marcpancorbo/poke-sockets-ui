@@ -1,0 +1,35 @@
+<article class="flex flex-col gap-4">
+  <section class="flex items-center gap-5">
+    <input [(ngModel)]="username" type="text" />
+    <button
+      (click)="connect$.next()"
+      class="rounded-md bg-white p-2 text-bali-hai-700"
+      type="button"
+      [disabled]="!username || $connected()">
+      Connect
+    </button>
+  </section>
+  <section class="flex flex-col gap-5">
+    <textarea [(ngModel)]="message" placeholder="Send your message"></textarea>
+    <button
+      (click)="sendMessage$.next()"
+      class="rounded-md bg-white p-2 text-bali-hai-700"
+      type="button"
+      [disabled]="!message || !$connected()">
+      Send Message
+    </button>
+  </section>
+  <section>
+    @for (message of $messages(); track $index) {
+      <p>{{ message | json }}</p>
+    }
+  </section>
+  <section class="grid grid-cols-3 gap-4">
+    <app-pokemon-card
+      (onPokemonSelected)="$selectedPokemon.set($event)"></app-pokemon-card>
+    <app-pokemon-card
+      (onPokemonSelected)="$selectedPokemon.set($event)"></app-pokemon-card>
+    <app-pokemon-card
+      (onPokemonSelected)="$selectedPokemon.set($event)"></app-pokemon-card>
+  </section>
+</article>

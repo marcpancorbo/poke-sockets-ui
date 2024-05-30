@@ -1,0 +1,9 @@
+@if ($pokemon()) {
+  <div
+    [ngClass]="{ 'bg-green-300': $selected() }"
+    class="flex flex-col items-center gap-3 rounded-md bg-white p-5"
+    (click)="selectPokemon()">
+    <img [src]="$pokemon()?.sprites?.front_default" alt="" />
+    <h1>{{ $pokemon()!.name }}</h1>
+  </div>
+}

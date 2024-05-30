@@ -1,4 +1,4 @@
 export const environment = {
-    baseApiUrl: '',
+    baseApiUrl: 'http://localhost:5240',
     pokeApiBaseUrl: 'https://pokeapi.co/api/v2',
 };

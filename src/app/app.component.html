@@ -1,12 +1,1 @@
-<div class="flex flex-col items-center gap-5">
-  <button
-    [disabled]="$loading()"
-    (click)="$click.next()"
-    type="button"
-    class="bg-blue-400 p-3 text-black">
-    Fetch Pokemons
-  </button>
-  <pre>
-    {{ $pokemons() | json }}
-  </pre>
-</div>
+<router-outlet> </router-outlet>
