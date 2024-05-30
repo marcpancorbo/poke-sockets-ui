@@ -15,7 +15,25 @@
             "regexp": "(.*?)"
           },
           "endsPattern": {
-            "regexp": "bundle generation complete"
+            "regexp": "Watch mode enabled. Watching for file changes..."
+          }
+        }
+      }
+    },
+    {
+      "type": "npm",
+      "script": "start:proxy",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "typescript",
+        "pattern": "$tsc",
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": {
+            "regexp": "(.*?)"
+          },
+          "endsPattern": {
+            "regexp": "Compiled successfully."
           }
         }
       }
